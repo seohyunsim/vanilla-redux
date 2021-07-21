@@ -1,12 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { actionCreators } from '../store';
 
-export const Todo = ({ text, onBtnClick }) => {
+export const Todo = ({ text, onBtnClick, id }) => {
     return (
         <li>
-            {text}
-            <button onClick={onBtnClick}>삭제</button>
+            <Link to={`/${id}`}>
+                {text}
+                <button onClick={onBtnClick}>삭제</button>
+            </Link>
         </li>
     );
 }
