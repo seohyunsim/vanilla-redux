@@ -1,12 +1,24 @@
-import react from 'react';
-import reactDom from 'react-dom';
-import { Provider } from 'react-redux';
-import App from './components/App';
-import store from './store';
+const add = document.getElementById('add');
+const minus = document.getElementById('minus');
+const number = document.querySelector('span');
 
-reactDom.render(
-    <Provider store={store}>
-        <App/>
-    </Provider>, 
-    document.getElementById("root")
-);
+let count = 0;
+
+number.innerHTML = count;
+
+const updateCount = () => {
+  number.innerHTML = count;
+}
+
+const handleAdd = () => {
+  count++;
+  updateCount();
+};
+
+const handleMinus = () => {
+  count--;
+  updateCount();
+};
+
+add.addEventListener("click", handleAdd);
+minus.addEventListener("click", handleMinus);
