@@ -22,5 +22,3 @@ const handleMinus = () => {
 
 add.addEventListener("click", handleAdd);
 minus.addEventListener("click", handleMinus);
-
-console.log('count');
