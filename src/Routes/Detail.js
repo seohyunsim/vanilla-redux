@@ -9,7 +9,7 @@ function Detail ({ toDo, onDetailBtnClick }) {
             <h5>Create at: {toDo?.id}</h5>
             <button onClick={onDetailBtnClick}>삭제</button>
         </div> 
-    );
+    );  
 }
 
 function mapStateToProps(state, ownProps) {
